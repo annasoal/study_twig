@@ -1,16 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Анна
- * Date: 01.11.2015
- * Time: 11:00
- */
+
 
 namespace Controller;
 
 use Core\View;
 
-class Base {
+class Base
+{
     protected $params;
     protected $page;
     protected $template;
@@ -29,6 +25,10 @@ class Base {
         $this->params = $params;
         $this->$action();
 
+    }
+    public function __call($name, $params)
+    {
+        throw new \Exception('Not found');
     }
 
 }

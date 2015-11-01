@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Анна
- * Date: 30.10.2015
- * Time: 12:39
- */
+
 
 namespace Controller;
 
 class Page
-  extends Base
+    extends Base
 {
 
     protected function action_main()
@@ -28,8 +23,7 @@ class Page
          eius harum itaque laborum, maiores molestiae praesentium sapiente sequi similique veritatis voluptas!
           Aliquid deleniti nemo voluptatibus?';
         $this->template = 'main.html';
-        echo $this->view->render($this->template, ['page'=>$this->page]);
-
+        echo $this->view->render($this->template, ['page' => $this->page]);
 
 
     }
@@ -48,7 +42,16 @@ class Page
          eius harum itaque laborum, maiores molestiae praesentium sapiente sequi similique veritatis voluptas!
           Aliquid deleniti nemo voluptatibus?';
         $this->template = 'other.html';
-        echo $this->view->render($this->template, ['page'=>$this->page]);
+        echo $this->view->render($this->template, ['page' => $this->page]);
+
+    }
+    protected function action_p404()
+    {
+        $this->page->title = 'Страница не найдена';
+        $this->page->heading = 'Ошибка 404';
+        $this->page->content = 'Запрашиваемая страница отсутствует на сайте';
+        $this->template = 'main.html';
+        echo $this->view->render($this->template, ['page' => $this->page]);
 
     }
 

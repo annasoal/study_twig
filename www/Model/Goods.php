@@ -2,7 +2,7 @@
 namespace Model;
 
 class Goods
- extends \Core\Model
+    extends \Core\Model
 {
     private static $instance;
 
@@ -19,7 +19,6 @@ class Goods
     {
         parent::__construct('goods', 'id_goods');
     }
-
 
 
 }

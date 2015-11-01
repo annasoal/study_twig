@@ -26,17 +26,17 @@ class View
     {
         Twig_Autoloader::register();
         $loader = new Twig_Loader_Filesystem([__DIR__ . '/../layouts',
-                                              __DIR__ . '/../templates']
+                __DIR__ . '/../templates']
         );//путь до шаблонов
         return $this->twig = new Twig_Environment($loader,
-                                                  ['cache' => false]
+            ['cache' => false]
         );//кеширует шаблоны
     }
 
-    public function render($name,$object)
+    public function render($name, $object)
     {
 
-        return $this->twig->render($name,$object);
+        return $this->twig->render($name, $object);
     }
 
 }
