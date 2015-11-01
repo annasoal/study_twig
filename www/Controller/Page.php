@@ -47,7 +47,7 @@ class Page
           Aliquid deleniti nemo voluptatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam at atque, dolor dolores
          eius harum itaque laborum, maiores molestiae praesentium sapiente sequi similique veritatis voluptas!
           Aliquid deleniti nemo voluptatibus?';
-        $this->template = 'main.html';
+        $this->template = 'other.html';
         echo $this->view->render($this->template, ['page'=>$this->page]);
 
     }

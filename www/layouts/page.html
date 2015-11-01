@@ -36,9 +36,25 @@
         <h1>{% block pageheader %} {% endblock %}</h1>
     </header>
     <main role="main">
-        <div class="container-fluid" >
-            {% block content %} {% endblock %}
+        <div class="row">
+            <div class="col-md-4">
+                <aside role="complementary">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li ><a href="#">Новости</a></li>
+                        <li><a href="#">Спецпредложения</a></li>
+                        <li><a href="#">Где купить</a></li>
+                        <li><a href="#">Задать вопрос</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+
+            <div class=" row-content col-md-8">
+                {% block content %} {% endblock %}
+            </div>
         </div>
+
+
     </main>
     <footer role="contentinfo">
         <div class="row">
