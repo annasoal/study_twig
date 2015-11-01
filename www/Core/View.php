@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Анна
- * Date: 30.10.2015
- * Time: 17:45
- */
+
 
 namespace Core;
 
@@ -32,12 +27,15 @@ class View
         Twig_Autoloader::register();
         $loader = new Twig_Loader_Filesystem([__DIR__ . '/../layouts',
                                               __DIR__ . '/../templates']
-    );//путь до шаблонов
+        );//путь до шаблонов
         return $this->twig = new Twig_Environment($loader,
-            ['cache' => false]);//кеширует шаблоны
+                                                  ['cache' => false]
+        );//кеширует шаблоны
     }
+
     public function render($name,$object)
     {
+
         return $this->twig->render($name,$object);
     }
 

@@ -13,14 +13,14 @@ class Model
 {
     protected $db;
     protected $table;
-    protected $pk;
+    //protected $pk;
 
 
     protected function __construct($table, $pk){
 
         $this->db = SqlDb::app();
         $this->table = $table;
-        $this->pk = $pk;
+        //$this->pk = $pk;
 
     }
 
