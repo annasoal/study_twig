@@ -1,0 +1,10 @@
+{% extends 'page.html' %}
+{% block title %} {{ page.title}} {% endblock %}
+{% block pageheader %}{{ page.heading}} {% endblock %}
+
+{% block content %}
+{% for item in page.content %}
+{% include 'goods.html' %}
+{% endfor %}
+{% endblock %}
+
