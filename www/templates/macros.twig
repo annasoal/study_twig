@@ -7,18 +7,18 @@
 					{% set m = '' %}
 				{% endif %}
 			<a href="#">{{ item.name ~ m }}</a>
-
+		{% endif %}
 	{% endfor %}
 
 {% endmacro %}
 
 
-{% macro lists(items) %}
+{% macro ordinarylists(items) %}
 
 	{% for item in items %}
-		{% for el in item %}
-			{{item.el }}
-		{% endfor %}
+
+			{{item | raw}}
+
 	{% endfor %}
 
 {% endmacro %}

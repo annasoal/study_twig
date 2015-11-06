@@ -2,4 +2,11 @@
 {% block title %} {{ page.title}} {% endblock %}
 {% block pageheader %}{{ page.heading}} {% endblock %}
 {% block content %}{{ page.content}}  {% endblock %}
+{% block footer %}
+{{app.title | raw}}
+
+{% import 'macros.twig' as lib %}
+{{ lib.ordinarylists(app.contacts) }}
+
+{% endblock %}
 

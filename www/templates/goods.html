@@ -1,7 +1,6 @@
 <h2>{{item.name}}</h2>
-<p>{{item.description |slice (0-25}}</p>
+<p>{{fewWords(item.description, 4)}} <a  href="/goods/one/{{item.id_goods}}">подробнее</a>
 <p> Товар добавлен {{item.date | date('Y')}}</p>
-<h3> Теги </h3>
-<p> Цена сегодня {{item.price}} USD</p>
-<p><a class="btn btn-success btn-lg" href="/goods/one/{{item.id_goods}}">Подробнее</a></p>
+<p> Цена сегодня {{item.price}} т.руб. <br>{{item.price|convertUsd | raw }} {{item.price | convertEuro | raw}} </p>
 
+<h3> Теги </h3>

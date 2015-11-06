@@ -14,8 +14,34 @@
         {%endfor%}
     </div>
 </div>
-
 {% endfor %}
+{% block aside %}
+<aside role="presentation">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Рекомендованные товары</h3>
+                </div>
+
+                <div class="panel-body">
+                    {% for item in page.goods %}
+                    {% if item is recommend %}
+
+                    <h4>{{item.name}}</h4>
+                    <p> Цена {{ item.price}} т.руб.</p>
+
+                    {% endif%}
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</aside>
 
 {% endblock %}
+
+{% endblock %}
+
 
