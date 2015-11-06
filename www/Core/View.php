@@ -28,9 +28,13 @@ class View
         $loader = new Twig_Loader_Filesystem([__DIR__ . '/../layouts',
                 __DIR__ . '/../templates']
         );//путь до шаблонов
-        return $this->twig = new Twig_Environment($loader,
+
+        $this->twig = new Twig_Environment($loader,
             ['cache' => false]
-        );//кеширует шаблоны
+        );
+        $this->twig->addExtension(new MyTwigExtension());
+
+        return $this->twig;
     }
 
     public function render($name, $object)
@@ -38,5 +42,6 @@ class View
 
         return $this->twig->render($name, $object);
     }
+
 
 }
