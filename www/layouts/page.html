@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="/styles/styles.css" rel="stylesheet">
-    <title>{% block title %} {% endblock %} </title>
+    <title>{% block title %}{{app.title | raw}} | {% endblock %} </title>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
         <div class="col-md-12 text-center">
             <div class="footer-btm">
                 {% block footer %}
-                {{app.title | raw}}
+
                 {% endblock %}
                 <span>&copy;2015 &laquo;Магазин&raquo; </span>
             </div>

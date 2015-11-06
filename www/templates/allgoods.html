@@ -1,5 +1,5 @@
 {% extends 'page.html' %}
-{% block title %} {{ page.title}} {% endblock %}
+{% block title %} {{parent()}}{{ page.title}} {% endblock %}
 {% block pageheader %}{{ page.heading}} {% endblock %}
 
 {% block content %}

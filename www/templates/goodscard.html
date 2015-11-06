@@ -1,5 +1,5 @@
 {% extends 'page.html' %}
-{% block title %} {{ goods.name|capitalize}} {% endblock %}
+{% block title %} {{parent()}}{{ goods.name|capitalize}} {% endblock %}
 {% block pageheader %}{{ block ('title')}} {% endblock %}
 
 {% block content %}
