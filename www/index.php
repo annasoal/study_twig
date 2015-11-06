@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 include_once (__DIR__.'/autoload.php');
 require (__DIR__.'/config.php');
@@ -19,13 +20,13 @@ $c .= isset($params[0]) ? ucfirst($params[0]) : 'Page';
 $action = 'action_';
 $action .= isset($params[1]) ? $params[1] : 'main';
 
-try{
+//try{
     $conrtroller = new $c();
     $conrtroller->request($action, $params);
-}
-catch(\Exception $e){
+//}
+/*catch(\Exception $e){
     $c = '\\Controller\\Page';
     $action = 'action_p404';
     $conrtroller = new $c();
     $conrtroller->request($action, $params);
-}
+}*/
