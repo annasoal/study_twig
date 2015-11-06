@@ -17,7 +17,7 @@ class Model
 
         $this->db = SqlDb::app();
         $this->table = $table;
-        //$this->pk = $pk;
+        $this->pk = $pk;
 
     }
 
@@ -26,5 +26,9 @@ class Model
 
         return $this->db->select("SELECT * FROM {$this->table}");
     }
+    public function one($id)
+    {
 
+        return $this->db->select("SELECT * FROM {$this->table} WHERE {$this->pk}=:{$this->pk}", [$this->pk => $id])[0];
+    }
 }
