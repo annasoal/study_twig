@@ -1,0 +1,23 @@
+{% extends 'page.html' %}
+{% block title %} {{ goods.name|capitalize}} {% endblock %}
+{% block pageheader %}{{ block ('title')}} {% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <div class="jumbotron-content">
+
+        <p>{{goods.description}}</p>
+        <p> Товар добавлен {{goods.date | date('d-m-Y')}}</p>
+        <p> Цена сегодня {{goods.price}} USD</p>
+        <p><a class="btn btn-success btn-lg" href="#">Купить</a></p>
+        {% set id = goods.id_goods %}
+
+        <h3> Теги </h3>
+        {% import 'macros.twig' as lib %}
+        {{ lib.list(tags,'id_goods', id, ',') }}
+
+    </div>
+</div>
+
+{% endblock %}

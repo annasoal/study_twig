@@ -1,0 +1,24 @@
+{% macro list(items, id_item, id, bullet) %}
+
+    {% for item in items  %}
+		{% if attribute(item,id_item) == id %}
+			{%  set m = bullet %}
+				{% if loop.last == true %}
+					{% set m = '' %}
+				{% endif %}
+			<a href="#">{{ item.name ~ m }}</a>
+
+	{% endfor %}
+
+{% endmacro %}
+
+
+{% macro lists(items) %}
+
+	{% for item in items %}
+		{% for el in item %}
+			{{item.el }}
+		{% endfor %}
+	{% endfor %}
+
+{% endmacro %}

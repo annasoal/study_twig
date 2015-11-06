@@ -4,26 +4,31 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2213789b630654bcc4acadf3b344fc36",
+    "hash": "b2e384734549a609134cc6f1c6e18310",
     "packages": [
         {
             "name": "twig/twig",
-            "version": "1.6.5",
+            "version": "v1.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "97ade38d5c0b095f8ed9fadb61f71ab79f13d7af"
+                "reference": "27f3428b08c7f656d6824359a9d9dee3f5fce31b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/97ade38d5c0b095f8ed9fadb61f71ab79f13d7af",
-                "reference": "97ade38d5c0b095f8ed9fadb61f71ab79f13d7af",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/27f3428b08c7f656d6824359a9d9dee3f5fce31b",
+                "reference": "27f3428b08c7f656d6824359a9d9dee3f5fce31b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Twig_": "lib/"
@@ -31,7 +36,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD"
+                "BSD-3"
             ],
             "authors": [
                 {
@@ -48,7 +53,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2012-04-11 09:00:38"
+            "time": "2013-04-08 12:40:11"
         }
     ],
     "packages-dev": [],

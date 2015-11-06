@@ -3,8 +3,19 @@
 {% block pageheader %}{{ page.heading}} {% endblock %}
 
 {% block content %}
-{% for item in page.content %}
-{% include 'goods.html' %}
+{% for item in page.goods %}
+<div class="jumbotron">
+    <div class="jumbotron-content">
+        {% include 'goods.html' %}
+        {%set id = item.id_goods %}
+        {% for element in page.tags  %}
+            {% import 'macros.twig' as lib %}
+            {{ lib.list(element,'id_goods', id, ',') }}
+        {%endfor%}
+    </div>
+</div>
+
 {% endfor %}
+
 {% endblock %}
 

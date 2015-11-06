@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 include_once (__DIR__.'/autoload.php');
 require (__DIR__.'/config.php');
 require (__DIR__.'/vendor/autoload.php');

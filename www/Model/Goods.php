@@ -15,10 +15,11 @@ class Goods
         return self::$instance;
     }
 
-    protected function __construct()
+    public function __construct()
     {
         parent::__construct('goods', 'id_goods');
     }
+
 
 
 }
