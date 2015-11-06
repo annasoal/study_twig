@@ -60,6 +60,9 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <div class="footer-btm">
+                {% block footer %}
+                {{app.title | raw}}
+                {% endblock %}
                 <span>&copy;2015 &laquo;Магазин&raquo; </span>
             </div>
         </div>
