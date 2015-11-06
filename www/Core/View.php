@@ -3,7 +3,7 @@
 
 namespace Core;
 
-use Twig_Autoloader;
+//use Twig_Autoloader;
 use Twig_Environment;
 use Twig_Loader_Filesystem;
 
@@ -24,7 +24,7 @@ class View
 
     public function __construct()
     {
-        Twig_Autoloader::register();
+        //Twig_Autoloader::register(); depricated
         $loader = new Twig_Loader_Filesystem([__DIR__ . '/../layouts',
                 __DIR__ . '/../templates']
         );//путь до шаблонов
