@@ -38,9 +38,20 @@ class MyTwigExtension
                                           return implode($substr,' ');
                                       }
             ),
-            new Twig_SimpleFunction('goodsForTags',
-                function($tags) {
-                    return $listOfGoods;
+            new Twig_SimpleFunction('specGoodsForTags',
+                function($id_tag) {
+                    if ($id_tag == 4) {
+                        return $attention = [
+
+                            'name' => 'Свечи зажигания эксклюзив',
+                            'price' => '1000'
+                        ];
+                    } else {
+                        return $attention = [
+
+                            'name' => 'Свечи зажигания ВИП',
+                            'price' => '2000'];
+                    }
                 }
             ),
 
