@@ -30,14 +30,12 @@
                 </div>
                 <div class="panel-body">
                     <div class="panel-body">
-                        {% for item in page.goods %}
-                        {% if item is recommend %}
 
-                        <h4>{{item.name}}</h4>
-                        <p> Цена {{ item.price}} т.руб.</p>
+                        {% for el in tags %}
+                        <h4>{{specGoodsForTags(el.id_tag).name}}</h4>
+                        <p> Цена {{ specGoodsForTags(el.id_tag).price}} т.руб.</p>
+                        {% endfor%}
 
-                        {% endif%}
-                        {% endfor %}
                     </div>
                 </div>
             </div>
