@@ -43,6 +43,7 @@ class Goods
         $this->goods = MGoods::app()->one($id);
         $this->tags = MTags::app()->getTagsForOne($id);
         $this->template = 'goodscard.html';
+        var_dump($this->tags);
         echo $this->view->render($this->template, ['goods' => $this->goods,'tags'=>$this->tags]);
 
 
